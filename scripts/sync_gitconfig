@@ -1,0 +1,11 @@
+#!/bin/sh
+
+GITCONFIG=files/.gitconfig
+
+# apply changes from user's global config to local index
+git diff $GITCONFIG ~/.gitconfig | patch $GITCONFIG
+
+# persist changes to remote
+git add $GITCONFIG
+git commit -m "Synchronizes gitconfig."
+git push
