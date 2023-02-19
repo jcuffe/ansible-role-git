@@ -1,2 +1,10 @@
 ---
-# tasks file for ansible-role-git
+- name: ensure latest git is installed
+  become: true
+  apt:
+    name: git
+    state: latest
+- name: copy global git config
+  copy:
+    src: .gitconfig
+    dest: ~
