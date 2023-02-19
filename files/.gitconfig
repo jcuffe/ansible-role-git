@@ -3,3 +3,5 @@
 	name = Jared Cuffe
 [core]
 	editor = kak
+[alias]
+	co = checkout
