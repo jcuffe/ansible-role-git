@@ -7,4 +7,4 @@
 - name: copy global git config
   copy:
     src: .gitconfig
-    dest: ~
+    dest: "~/"
