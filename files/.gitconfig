@@ -5,3 +5,10 @@
 	editor = kak
 [alias]
 	co = checkout
+	pu = push --set-upstream origin HEAD
+	sw = switch -
+	rl = reflog
+	lo = log --oneline
+	s = status --short
+[pull]
+	rebase = true
