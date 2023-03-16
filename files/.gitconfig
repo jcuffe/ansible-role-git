@@ -1,6 +1,7 @@
 [user]
 	email = jcuffe@gmail.com
 	name = Jared Cuffe
+	signingkey = 42B558553D9A3938
 [core]
 	editor = kak
 [alias]
@@ -9,6 +10,9 @@
 	sw = switch -
 	rl = reflog
 	lo = log --oneline
+	p = push
 	s = status --short
 [pull]
 	rebase = true
+[commit]
+	gpgsign = true
