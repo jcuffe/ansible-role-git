@@ -7,11 +7,15 @@
 [alias]
 	co = checkout
 	pu = push --set-upstream origin HEAD
-	sw = switch -
+	sw = switch
 	rl = reflog
 	lo = log --oneline
 	p = push
+	pt = push --tags
+        pl = pull
+        plt = pull --tags
 	s = status --short
+	tech = !git branch --show-current | sed -E \"s/.*\\b(tech-[0-9]+)\\b.*/\\U[\\1]/g\" | tmux loadb -w - && tmux saveb -
 [pull]
 	rebase = true
 [commit]
