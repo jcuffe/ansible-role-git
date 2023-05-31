@@ -6,16 +6,19 @@
 	editor = kak
 [alias]
 	co = checkout
-	pu = push --set-upstream origin HEAD
-	sw = switch
-	rl = reflog
+	fu = rebase -i HEAD~2
 	lo = log --oneline
-	p = push
-	pt = push --tags
         pl = pull
         plt = pull --tags
+	p = push
+	pt = push --tags
+	pu = push --set-upstream origin HEAD
+	rl = reflog
 	s = status --short
+	sw = switch
 	tech = !git branch --show-current | sed -E \"s/.*\\b(tech-[0-9]+)\\b.*/\\U[\\1]/g\" | tmux loadb -w - && tmux saveb -
+	unwip = reset HEAD~1
+	wip = commit -nm 'WIP'
 [pull]
 	rebase = true
 [commit]
