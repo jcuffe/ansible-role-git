@@ -5,7 +5,9 @@
 [core]
 	editor = kak
 [alias]
+        au = add -u
 	co = checkout
+	cm = commit -m 
 	fu = rebase -i HEAD~2
 	lo = log --oneline
         pl = pull
@@ -17,6 +19,7 @@
 	s = status --short
 	sw = switch
 	tech = !git branch --show-current | sed -E \"s/.*\\b(tech-[0-9]+)\\b.*/\\U[\\1]/g\" | tmux loadb -w - && tmux saveb -
+        todos = !ag \"$(git tech) TODO\" -Q
 	unwip = reset HEAD~1
 	wip = commit -nm 'WIP'
 [pull]
