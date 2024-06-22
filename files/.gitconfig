@@ -18,6 +18,7 @@
 	rl = reflog
 	s = status --short
 	sw = switch
+	wfr = !gh run download $(gh run list -c $(git rev-parse HEAD) -w 'Merge Tests' --json databaseId --jq '.[0].databaseId') -D my-workflow-runs
 	tech = !git branch --show-current | sed -E \"s/.*\\b(tech-[0-9]+)\\b.*/\\U[\\1]/g\" | tmux loadb -w - && tmux saveb -
         todos = !ag \"$(git tech) TODO\" -Q
 	unwip = reset HEAD~1
